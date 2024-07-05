@@ -1,12 +1,20 @@
 let clientes = JSON.parse(localStorage.getItem('clientes')) || [];
 
 //Menu hamburguesa
+//Para abrirlo
 function openNav(){
     document.getElementById("mobile-menu").style.width = "100%";
 }
 
+//Para cerrarlo
 function closeNav(){
     document.getElementById("mobile-menu").style.width = "0%";
+}
+
+//Para cerrarlo al hacer click en un link
+function closeNavAndScrollTo(sectionId) {
+    document.getElementById("mobile-menu").style.width = "0";
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
 }
 
 //buscador

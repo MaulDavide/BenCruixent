@@ -717,21 +717,19 @@ section{
     color: #ebe9f2;
 }
 
-.home .creditos{
+.creditos{
     font-size: 0.8rem;
     color: #adadad;
     position: absolute;
-    left: 1%;
-    top: 97%;
 }
 
-.home .creditos a{
+.creditos a{
     font-size: 0.8rem;
     text-decoration: none;
     color: #adadad;
 }
 
-.home .creditos a:hover{
+.creditos a:hover{
     cursor: pointer;
     text-decoration: underline;
 }
@@ -1427,17 +1425,12 @@ footer {
     }
 }
 
-@media (max-width:650px){
-    .contact .heading{
-        font-size: 35px;
-    }
-
-    .contact .heading span{
-        font-size: 35px;
-    }
-}
-
 @media (max-width: 575px){
+
+    .heading {
+        margin: 10px;
+    }
+
     .new-row .contentWrapper2 span.textWrapper2{
         font-size: 18px;
     }
@@ -1474,14 +1467,6 @@ footer {
         padding: 10px 20px;
     }
 
-    .contact .heading{
-        font-size: 30px;
-    }
-    
-    .contact .heading span{
-        font-size: 30px;
-    }
-
     .contact .row form h3{
         font-size: 2rem;
     }
@@ -1492,6 +1477,17 @@ footer {
 
     .btn {
         padding: 9px 0px;
+    }
+}
+
+@media (max-width:513px){
+
+    .heading {
+        font-size: 29px;
+    }
+
+    .heading span {
+        font-size: 29px;
     }
 }
 
@@ -1508,16 +1504,21 @@ footer {
 
 @media (max-width: 450px){
 
-    .contact .heading{
-        font-size: 25px;
+    *{
+        font-size: 15px;
     }
-    
-    .contact .heading span{
-        font-size: 25px;
+
+    .header{
+        height: 100px;
+        padding: 1px 2%;
+    }
+
+    .header .logo img {
+        height: 80px;
     }
 
     .nav-icons{
-        display: inline;
+        display: contents;
         margin: 20px;
         text-align: center
     }
