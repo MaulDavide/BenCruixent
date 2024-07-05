@@ -1229,6 +1229,17 @@ footer {
 
 /*MEDIAS*/
 
+@media (max-width:1500px){
+
+    .header .formulario-login {
+        left: 65%;
+    }
+
+    .header .formulario-singUp {
+        left: 55%;
+    }
+}
+
 @media (max-width:1445px){
 
     .div-productos{
@@ -1245,6 +1256,7 @@ footer {
     .contact .row .map{
         flex: 1 1 45rem;
         width: 100%;
+        max-height: 500px;
         object-fit: cover;
         margin-top: 0rem;
     }
@@ -1359,6 +1371,13 @@ footer {
     }
 }
 
+@media (max-width: 800px){
+
+    .header .cart-items-container {
+        width: 25rem;
+    }
+}
+
 @media (max-width: 768px){
     .new-row{
         width: 90%;
@@ -1423,6 +1442,21 @@ footer {
     .contact .row form h3 span{
         font-size: 2.5rem;
     }
+}
+
+@media (max-width:600px){
+
+    .header .formulario-login {
+        width: 300px;
+    }
+
+    .header .formulario-login .cerrar i {
+        font-size: 1.5rem;
+    }
+
+    .header .formulario-recuperar {
+        right: -32%;
+}
 }
 
 @media (max-width: 575px){
@@ -1493,12 +1527,25 @@ footer {
 
 @media (max-width:490px){
 
+    .header .formulario-recuperar {
+        right: -22%;
+        top: -4%;
+        width: 300px;
+    }
+
     .contact .row form h3{
         font-size: 1.5rem;
     }
 
     .contact .row form h3 span{
         font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 463px) {
+
+    .header .cart-items-container {
+        height: 34.5rem;
     }
 }
 
@@ -1534,5 +1581,31 @@ footer {
         font-size: 40px;
         top: 15px;
         right: 35px;
+    }
+
+    .header .formulario-login {
+        top: -93%;
+        left: 50%;
+        width: 300px;
+    }
+
+    .header .formulario-singUp {
+        top: -239%;
+        left: 51%;
+        width: 300px;
+    }
+
+    .header .legal{
+        top: -147%;
+        right: -21%;
+        width: 300px;
+    }
+
+    .header .legal h2 {
+        padding: 22px;
+    }
+
+    .contact .row .map {
+        max-height: 300px;
     }
 }
