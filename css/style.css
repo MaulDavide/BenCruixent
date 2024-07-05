@@ -720,7 +720,7 @@ section{
 .creditos{
     font-size: 0.8rem;
     color: #adadad;
-    position: absolute;
+    position: relative;
 }
 
 .creditos a{
