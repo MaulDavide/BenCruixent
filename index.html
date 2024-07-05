@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Davide Maulella">
+    <meta name="keywords" content="pan, masa madre, pastel, panadería, café, horno, cruixent">
+    <meta name="description" content="Descubre la Panadería Ben Cruixent donde horneamos el mejor pan y pastel con masa madre auténtica. Disfruta de nuestro café fresco y otros productos deliciosos horneados en nuestro horno tradicional.">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Panadería Cruixent: El Mejor Pan, Masa Madre y Café en la Ciudad</title>
+</head>
+<body>
+
+    <!--------------------------- ENCABEZADO --------------------------->
+
+    <header class="header" id="nav" style="top: 0px">
+        <div class="logo">
+            <a href="#inicio"><img src="./img/Logo IA.PNG" alt="logo"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#review">Review</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <nav class="nav-icons">
+            <a href="#" class="btn"><i class="fa-solid fa-magnifying-glass" id="search-btn"></i></a>
+            <a href="#" class="btn"><i class="fa-regular fa-user" id="login-btn"></i></a>
+            <a href="#" class="btn icon-cart"><i class="fa-solid fa-cart-shopping" id="cart-btn"></i></a>
+            <!--<div class="container-icon">
+
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    strokeWidth={1.5} 
+                    stroke="currentColor" 
+                    class="icon-cart"
+                >
+                    <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        d="M15.75 10.5V6a3.75 3.75 0 
+                        1 0-7.5 0v4.5m11.356-1.993 1.263 
+                        12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 
+                        1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 
+                        0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 
+                        1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 
+                        0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 
+                        0 0 1 .75 0Z" 
+                    />
+                </svg>
+
+            </div>-->
+            
+        </nav>
+
+        <!-------------- Buscador -------------->
+        
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="busca aquí...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+        
+        <!-------------- Formulario de login -------------->
+
+        <div class="formulario-login" id="formulario-login">
+            <h1>Inicio de sesión<button class="cerrar"><i class="fas fa-times"></i></button></h1>
+            <form method="post" class="login">
+                <div class="username">
+                    <input type="text" name="" id="" required>
+                    <label>Correo electronico</label>
+                </div>
+                <div class="username">
+                    <input type="password" name="" id="" required>
+                    <label>Contraseña</label>
+                </div>
+                <div class="recordar"><a href="#formulario-recuperar">¿Olvidaste la contraseña?</a></div>
+                <input type="submit" value="Iniciar">
+                <div class="registrarse">
+                    <p>Quiero <a href="#formulario-singUp">registrarme</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-------------- Formulario de contraseña olvidada -------------->
+
+        <div class="formulario-recuperar" id="formulario-recuperar">
+            <h1>Recuperar Contraseña<button class="cerrar"><i class="fas fa-times"></i></button></h1>
+            <form method="post" class="recuperar">
+                <div class="username">
+                    <input type="text" name="" id="" required>
+                    <label>Correo electronico</label>
+                </div>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+
+        <!-------------- Formulario de registro -------------->
+
+        <div class="formulario-singUp" id="formulario-singUp">
+            <h1>Formulario de registro<button class="cerrar"><i class="fas fa-times"></i></button></h1>
+            <form method="post" class="singUp" id="singUp">
+                <div class="username">
+                    <input type="text" name="nombre" id="nombre" required>
+                    <label for="nombre">Nombre</label>
+                </div>
+                <div class="username">
+                    <input type="text" name="apellidos" id="apellidos" required>
+                    <label for="apellidos">Apellidos</label>
+                </div>
+                <div class="username">
+                    <input type="number" name="telefono" id="telefono" pattern="[0-9]{9}" required>
+                    <label for="telefono">Telefono</label>
+                </div>
+                <div class="username">
+                    <input type="email" name="email" id="email" required>
+                    <label for="email">Correo electronico</label>
+                </div>
+                <div class="username">
+                    <input type="password" name="password" id="password" required>
+                    <label for="password">Contraseña</label>
+                </div>
+                <div class="username">
+                    <input type="date" name="edad" id="edad">
+                    <label for="edad">Fecha de nacimiento</label>
+                </div>
+                <p>Estoy de acuerdo con <a href="#legal">Terminos y Condiciones</a></p>
+                <input type="button" value="Registrar" onclick="agregarCliente()">
+                <div class="cuenta">
+                    <a href="#formulario-login">¿Ya tengo una cuenta?</a>
+                </div>
+            </form>
+        </div>
+
+        <!-------------- Terminos y Condiciones en el formulario de registro -------------->
+
+        <div class="legal" id="legal">
+            <h2>Terminos y Condiciones<button class="cerrar"><i class="fas fa-times"></i></h2>
+            <p>
+                1. Al crear una cuenta en nuestra página web, aceptas recibir comunicaciones 
+                por correo electrónico sobre promociones, novedades y eventos relacionados 
+                con nuestra panadería.<br>
+                2. Los datos personales proporcionados al crear la cuenta serán tratados de 
+                acuerdo con nuestra política de privacidad y protección de datos. No 
+                compartiremos tu información con terceros sin tu consentimiento.<br>
+                3. Los productos ofrecidos en nuestra página web están sujetos a disponibilidad 
+                y podrían variar según la ubicación geográfica del usuario. Nos reservamos el 
+                derecho de modificar precios, descripciones y disponibilidad sin previo aviso.<br>
+                4. Al realizar una compra a través de nuestra página web, aceptas los términos 
+                de pago y envío establecidos en nuestro sitio. Te recomendamos revisar 
+                detenidamente tu pedido antes de confirmarlo.<br>
+                5. Nos esforzamos por brindar un servicio de calidad, pero no nos hacemos 
+                responsables por daños o perjuicios causados por el uso de nuestros productos o 
+                servicios.<br>
+                6. Nos reservamos el derecho de suspender o cancelar cuentas de usuario en 
+                caso de incumplimiento de estos términos y condiciones o por cualquier otra 
+                razón justificada.<br>
+                Al crear una cuenta en nuestra página web, aceptas automáticamente estos 
+                términos y condiciones. Te recomendamos leerlos detenidamente antes de proceder 
+                con el registro. ¡Gracias por confiar en nuestra panadería en línea!
+            </p>
+        </div>
+        <!-------------- Carrito -------------->
+        
+        <div class="cart-items-container">
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="./img/pan.avif" alt="">
+                <div class="content">
+                    <h3>Pan de centeno</h3>
+                    <div class="price">€5.60/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="./img/pan8.avif" alt="">
+                <div class="content">
+                    <h3>Pan integral</h3>
+                    <div class="price">€3.00/-</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <span class="fas fa-times"></span>
+                <img src="./img/pan6.avif" alt="">
+                <div class="content">
+                    <h3>Pan de pagés</h3>
+                    <div class="price">€2.50/-</div>
+                </div>
+            </div>
+            <a href="#" class="boton">chequear ahora</a>
+        </div> 
+        
+        <!-------------- Menu desplegable -------------->
+
+        <a onclick="openNav()" class="menu" href="#">
+            <svg 
+                xmlns="http://www.w3.org/2000/svg"
+                width="50" 
+                height="50"
+                fill="currentColor"
+                class="list_icon"
+                viewBox="0 0 448 512">
+                <!--!Font Awesome Free 6.5.2 by @fontawesome - 
+                https://fontawesome.com License - 
+                https://fontawesome.com/license/free 
+                Copyright 2024 Fonticons, Inc.-->
+                    <path 
+                        d="M16 132h416c8.8 0 16-7.2 
+                        16-16V76c0-8.8-7.2-16-16-16H16C7.2 60 0 67.2 0 
+                        76v40c0 8.8 7.2 16 16 16zm0 160h416c8.8 0 16-7.2 
+                        16-16v-40c0-8.8-7.2-16-16-16H16c-8.8 0-16 7.2-16 
+                        16v40c0 8.8 7.2 16 16 16zm0 160h416c8.8 0 16-7.2 
+                        16-16v-40c0-8.8-7.2-16-16-16H16c-8.8 0-16 7.2-16 
+                        16v40c0 8.8 7.2 16 16 16z"
+                    />
+            </svg>
+        </a>
+
+        <div class="overlay" id="mobile-menu">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#productos">Productos</a>
+                <a href="#review">Review</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </header>
+    
+    <!--------------------------- INICIO --------------------------->
+
+    <section class="home" id="inicio">
+
+        <div class="content">
+            <h3>Pan fresco cada mañana</h3>
+            <p>
+                Descubre la Panadería Ben Cruixent donde horneamos el mejor pan 
+                y pastel con masa madre auténtica. Disfruta de nuestro café 
+                caliente y otros productos deliciosos horneados en nuestro horno 
+                tradicional.
+            </p>
+            <a href="#productos" class="boton">Pidelo ahora</a>
+        </div>
+        <p 
+            class="creditos">Foto por <a href="https://unsplash.com/es/@patrickian4" target="_blank">Patrick Fore</a> en <a href="https://unsplash.com" target="_blank">Unsplash</a>
+        </p>
+    </section>
+
+    <!--------------------------- NOSOTROS --------------------------->
+
+    <div class="new-row" id="nosotros">
+
+        <div class="imgWrapper">
+
+            <img src="./img/imagen1.avif" alt="amasadura">
+            <p 
+                class="creditos">Foto por <a href="https://unsplash.com/es/@jeremyyappy" target="_blank">Jeremy Yap</a> en <a href="https://unsplash.com" target="_blank">Unsplash</a>
+            </p>
+        </div>
+        <div class="contentWrapper">
+
+            <div class="new-content">
+
+                <span class="textWrapper">
+
+                    <span></span>QUIEN SOMOS
+
+                </span>
+
+                <h2>Nuestra historia</h2>
+
+                <p>
+                    La panadería familiar comenzó hace generaciones en un pequeño pueblo, 
+                    donde la pasión por el pan se transmitió de padres a hijos. Con recetas 
+                    tradicionales y amor por la artesanía, la panadería ha crecido hasta 
+                    convertirse en un lugar emblemático para la comunidad.
+                </p>
+
+                <a href="#">Mas sobre nosostros</a>
+                
+            </div>
+
+        </div>
+
+        <!--------------------------------------------------------------->
+
+        <div class="contentWrapper2">
+
+            <div class="new-content2">
+
+                <span class="textWrapper2">
+
+                    NUESTRO PAN<span></span>
+
+                </span>
+
+                <h2>Nuestros productos</h2>
+
+                <p>
+                    Nuestro pan artesanal se elabora con ingredientes de alta calidad y siguiendo 
+                    recetas tradicionales que han pasado de generación en generación. Cada pieza 
+                    es única, con una corteza crujiente y un interior esponjoso que deleita los 
+                    sentidos. Descubre el sabor auténtico de nuestro pan en cada mordisco.
+                </p>
+                <a href="#">Mas sobre nuestro pan</a>
+
+            </div>
+            
+        </div>
+        <div class="imgWrapper2">
+
+            <img src="./img/iamgen2.avif" alt="">
+            <p 
+                class="creditos">Foto en <a href="https://unsplash.com" target="_blank">Unsplash</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <!--------------------------- PRODUCTOS --------------------------->
+
+    <section class="products" id="productos">
+
+        <h1 class="heading">nuestros<span>productos</span></h1>
+        
+        <div class="div-productos">
+            <div class="box-container">
+                <div class="box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart" id="btn-add-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="./img/pan.avif" alt="Pan">
+                        <p class="creditos">Foto por <a href="https://unsplash.com/es/@moniqa">Monika Grabkowska</a> en <a href="https://unsplash.com">Unsplash</a>
+                        </p>                        
+                    </div>
+                    <div class="content">
+                        <h3>Pan de centeno</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">€5.60</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-container">
+                <div class="box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="./img/pan8.avif" alt="Pan integral">
+                        <p 
+                            class="creditos">Foto por <a href="https://unsplash.com/es/@francescamyer" target="_blank">Franzi Meyer</a> en <a href="https://unsplash.com" target="_blank">Unsplash</a>
+                        </p> 
+                    </div>
+                    <div class="content">
+                        <h3>Pan integral</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">€3.00</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-container">
+                <div class="box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="./img/pan6.avif" alt="Pan blanco">
+                        <p 
+                            class="creditos">Foto por <a href="https://unsplash.com/es/@vickyng" target="_blank">Vicky Ng</a> en <a href="https://unsplash.com" target="_blank">Unsplash</a>
+                        </p> 
+                    </div>
+                    <div class="content">
+                        <h3>Pan de pagés</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">€2.50</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-container">
+                <div class="box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="./img/Pan de semilla.avif" alt="Pan de cereales">
+                        <p 
+                            class="creditos">Foto por <a href="https://unsplash.com/es/@tetianapadurets" target="_blank">Tetiana Padurets</a> en <a href="https://unsplash.com" target="_blank">Unsplash</a>
+                        </p> 
+                    </div>
+                    <div class="content">
+                        <h3>Pan de cereales</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">€3.50</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-container">
+                <div class="box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="./img/Pan de molde.avif" alt="Pan de molde">
+                        <p 
+                            class="creditos">Foto por <a href="https://unsplash.com/es/@pesce" target="_blank">Pesce Huang</a> en <a href="https://unsplash.com" target="_blank">Unsplash</a>
+                        </p> 
+                    </div>
+                    <div class="content">
+                        <h3>Pan de molde</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">€4.50</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-container">
+                <div class="box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="./img/Pan au Chocolate.avif" alt="Pain au Chocolat">
+                        <p 
+                            class="creditos">Foto por <a href="https://unsplash.com/es/@johnophoto" target="_blank">Jonathan Ocampo</a> en <a href="https://unsplash.com" target="_blank">Unsplash</a>
+                        </p> 
+                    </div>
+                    <div class="content">
+                        <h3>Pain au Chocolat</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">€1.30</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-container">
+                <div class="box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="./img/Croissant.avif" alt="Croissant">
+                        <p 
+                            class="creditos">Foto por <a href="https://unsplash.com/es/@johnophoto" target="_blank">Jonathan Ocampo</a> en <a href="https://unsplash.com" target="_blank">Unsplash</a>
+                        </p> 
+                    </div>
+                    <div class="content">
+                        <h3>Croissant</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">€1.10</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-container">
+                <div class="box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="./img/Pastel.avif" alt="Pastel de limon">
+                        <p 
+                            class="creditos">Foto por <a href="https://unsplash.com/es/@alexlvrs" target="_blank">Alex Lvrs</a> en <a href="https://unsplash.com" target="_blank">Unsplash</a>
+                        </p>                        
+                    </div>
+                    <div class="content">
+                        <h3>Tarta de limón</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">€5.50</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--------------------------- REVIEW --------------------------->
+
+    <section class="review" id="review">
+        
+        <h1 class="heading">review<span>clientes</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="./img/quote icon.png" alt="" class="quote">
+                <p>
+                    Tracten els seus productes amb el carinyo de qui te passió pel que fa. 
+                    Sempre innovant i sorprenent-nos. Molt recomenable.
+                </p>
+                <img src="./img/Angela Gracia Vicente.jpg" alt="" class="user">
+                <h3>Angela Gracia Vicente</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/quote icon.png" alt="" class="quote">
+                <p>
+                    Fui a buscar un Pack Too Good Too Go y me atendieron muy bien. 
+                    Los prodyctos son de calidad, frescos y muy sabrosos. Tantolos 
+                    dulces como ...<!-- el pan se notan bien hechos y con materia prima buena.
+                    Muy recomendable!--> 
+                </p>
+                <img src="./img/Berta.png" alt="" class="user">
+                <h3>Berta</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="./img/quote icon.png" alt="" class="quote">
+                <p>
+                    Panadería artesanal, como pocas hay, el pan está delicioso y dura un montón. 
+                    Y los crusanes de cereales están exquisitos, las cocas de sant joan, el 
+                    brownie ... <!-- de chocolate... y, por último y no menos importante y sé que lo que 
+                    voy a decir ahora es un flaco favor para mi porque es probable que me empiece 
+                    a quedar sin, pero... RECOMIENDO ENCARECIDAMENTE las galletas de avena, están 
+                    DELICIOSAS! Y que decir del trato, de 10! Cómo siempre, seguiremos repitiendo!!!!!-->
+                </p>
+                <img src="./img/Leticia A.S..png" alt="" class="user">
+                <h3>Leticia A.S</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--------------------------- CONTACTO --------------------------->
+
+    <section class="contact" id="contacto">
+
+        <h1 class="heading">contacta<span>con</span>nosotros</h1>
+
+        <div class="row">
+
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.
+            3435299234707!2d2.168641376465667!3d41.
+            41006089458784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+            1!3m3!1m2!1s0x12a4a2c591ca472f%3A0xaef80960e6f4076f!2sBEN%20CRUIXENT.
+            %20Forn%20de%20pa%20i%20Degustaci%C3%B3!5e0!3m2!1ses!2ses!4v1719481349219!5m2!1ses!2ses" 
+            width="600" height="450" style="border:0;" allowfullscreen="" 
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <form action="https://formsubmit.co/maulelladavide@gmail.com" method="post">
+                <h3>Ponte<span>en</span>contacto</h3>
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" name="name" id="name" placeholder="nombre" required>
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" name="email" id="email" placeholder="mail" required>
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-phone"></span>
+                    <input type="number" name="number" id="number" placeholder="numero" pattern="[0-9]{9}" required>
+                </div>
+                <div class="inputBox">
+                    <span class="fa fa-file-text"></span>
+                    <textarea name="coments" id="coments" cols="30" rows="5" placeholder="Escribe aquí tu comentario..." required></textarea>
+                </div>
+                <input type="submit" value="Enviar" class="boton">
+                <input type="hidden" name="_next" value="#">
+                <input type="hidden" name="_captcha" value="false">
+            </form>
+
+        </div>
+
+    </section>
+
+    </main>
+
+    <!--------------------------- PIÉ DE PAGINA --------------------------->
+
+    <footer>
+
+        <section class="footer">
+
+            <div class="share">
+                <a href="https://www.facebook.com/bencruixent/?locale=es_ES" target="_blank" class="fab fa-facebook-f"></a>
+                <a href="https://www.instagram.com/ben_cruixent.padilla_347.barna/" target="_blank" class="fab fa-instagram"></a>
+                <!--
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+                -->
+            </div>
+
+            <div class="links">
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#productos">Productos</a>
+                <a href="#review">Review</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+
+            <div class="credit">Creado por<span> Davide Maulella</span> | © Copyright 2024. Todos los derechos reservados</div>
+        </section>
+
+    </footer>
+    <script type="text/JavaScript" src="./JavaScript/nav.js"></script> 
+</body>
+</html>
