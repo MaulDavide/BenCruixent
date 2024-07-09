@@ -678,6 +678,7 @@ section{
 .header .cart-items-container .boton{
     width: 100%;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .header .search-form{
