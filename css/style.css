@@ -44,7 +44,7 @@ section{
 /*header*/
 
 .header{
-    position: fixed;
+    position: sticky;
     background-color: #8C4303;
     display: flex;
     justify-content: space-between;
@@ -627,11 +627,12 @@ section{
 .header .cart-items-container{
     position: absolute;
     top:100%; right: -100%;
-    height: calc(100vh - 9.5rem);
+    height: calc(100vh - 13rem);
     width: 35rem;
     background: #ebe9f2;
     padding: 0 1.5rem;
     display: none;
+    overflow-y: auto;
 }
 
 .header .cart-items-container.active{
@@ -1248,6 +1249,7 @@ footer {
 }
 
 @media (max-width:1395px){
+
     .contact .row{
         align-items: center;
         gap: 1rem;
@@ -1375,6 +1377,8 @@ footer {
 
     .header .cart-items-container {
         width: 25rem;
+        max-height: 800px;
+        overflow-y: auto;
     }
 }
 

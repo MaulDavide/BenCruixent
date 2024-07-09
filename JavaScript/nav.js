@@ -126,7 +126,7 @@ function borrarLocalStorage() {
     clientes = [];
 }
 
-//Funcion para mostar lso clientes (Hay que llamarla en algun sitio)
+//Funcion para mostar los clientes (Hay que llamarla en algun sitio)
 function listarClientes(){
     
     var listadoClientes = document.getElementById('listaCliente');
@@ -160,9 +160,9 @@ let searchForm = document.querySelector('.search-form');
 document.querySelector('#search-btn').onclick = () =>{
     searchForm.classList.toggle('active');
     login.classList.remove('active');
-    forgot.classList.remove('active')
+    /*forgot.classList.remove('active')
     register.classList.remove('active');
-    legal.classList.remove('active');
+    legal.classList.remove('active');*/
     cartItem.classList.remove('active');
 }
 
@@ -172,14 +172,14 @@ let login = document.querySelector('.formulario-login');
 document.querySelector('#login-btn').onclick = () =>{
     searchForm.classList.remove('active');
     login.classList.toggle('active');
-    forgot.classList.remove('active')
+    /*forgot.classList.remove('active')
     register.classList.remove('active');
-    legal.classList.remove('active');
+    legal.classList.remove('active');*/
     cartItem.classList.remove('active');
 }
 
 //forgot
-let forgot = document.querySelector('.formulario-recuperar');
+/*let forgot = document.querySelector('.formulario-recuperar');
 
 document.querySelector('#login-btn').onclick = () =>{
     searchForm.classList.remove('active');
@@ -212,7 +212,7 @@ document.querySelector('#login-btn').onclick = () =>{
     register.classList.remove('active');
     legal.classList.toggle('active');
     cartItem.classList.remove('active');
-}
+}*/
 
 //carrito
 let cartItem = document.querySelector('.cart-items-container');
@@ -220,9 +220,9 @@ let cartItem = document.querySelector('.cart-items-container');
 document.querySelector('#cart-btn').onclick = () =>{
     searchForm.classList.remove('active');
     login.classList.remove('active');
-    forgot.classList.remove('active')
+    /*forgot.classList.remove('active')
     register.classList.remove('active');
-    legal.classList.remove('active');
+    legal.classList.remove('active');*/
     cartItem.classList.toggle('active');
     }
 
